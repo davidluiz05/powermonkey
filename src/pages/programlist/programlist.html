@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Choose a Program</p>
+        </ion-title>
+        <ion-buttons left>
+            <button ion-button clear navPop>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <iframe width="100%"
+    src="https://www.youtube.com/embed/OHwlixQzzkQ?autoplay=1">
+    </iframe>
+    <div class="main-content">
+        <div *ngFor="let p of programs">
+        <ion-card>            
+            <img src="{{p.photo}}">
+            <ion-card-content>
+                <ion-card-title>
+                    {{p.name}}
+                </ion-card-title>
+                <p>
+                    {{p.description}}
+                </p>
+                <br>
+                <p>${{p.billingPrice}} / {{p.billingType}}</p>
+                <button ion-button small outline (click)="onStart(p.$key)">
+                    Start Program
+                </button>
+            </ion-card-content>
+        </ion-card>  
+        </div>      
+    </div>
+</ion-content>

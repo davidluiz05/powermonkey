@@ -1,0 +1,28 @@
+page-workouthistory{
+    ion-content{
+        ion-list{
+            ion-item{
+                .section-badge{
+                    font-family: "Roboto";
+                    font-size: 12px;
+                    font-weight: normal;
+                    padding-left: 9px;
+                    padding-right: 9px;
+                    border-radius: 18px;
+                    color: white;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                }
+                font-family: "Roboto";
+                font-size: 16px;
+                font-weight: normal;
+                .small{
+                    font-family: "Roboto";
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: rgb(170, 170,170);
+                }
+            }
+        }
+    }
+}

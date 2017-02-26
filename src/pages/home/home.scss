@@ -1,0 +1,130 @@
+page-home{
+    ion-content{
+        .first-block{
+            position: relative;
+
+            .image-block{
+                overflow: hidden;
+                height: 120px;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+            }
+
+            .gradient{
+                position:absolute;
+                display: block;
+                width: 100%;
+                height: 65%;
+                bottom: 0;
+                left: 0;
+                background: linear-gradient(rgba(239,239,239,0), #efefef);
+                z-index: 2;
+            }
+        }
+
+        .second-block{
+            margin-top: -90px;
+            background: transparent;
+            z-index: 2;
+            position: relative;
+            padding: 10px;
+
+            h2{
+                margin: 0 0 9px;
+                text-shadow: 0 1px 1px rgba(0,0,0,0.05);
+                color: white;
+                font-family: "Roboto";
+                font-weight: 300;
+                font-size: 32px;
+            }
+
+            button{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            
+        }
+
+
+        .item-padding{
+            padding-top: 10px;
+            padding-right: 16px;
+            padding-bottom: 10px;
+            padding-left: 16px;
+        }
+
+
+        ion-card{
+            ion-grid{
+                ion-row{
+                    h1{
+                        text-align: right;
+                        margin: 0;
+                        color: white !important;
+                        font-size: 36px;
+                    }
+
+                    p{
+                        font-size: 14px;
+                        font-family: "Roboto";
+                        font-weight: 300;
+                        color: white !important;
+                    }
+
+                    span{
+                        font-size: 14px;
+                        font-family: "Roboto";
+                        font-weight: 300;
+                        color: white !important;
+                    }
+
+                    .circle{
+                        float: right;
+                        width: 55px;
+                        height: 55px;
+                        line-height: 33px;
+                        border-radius: 50%;
+                        font-family: "Roboto";
+                        font-weight: 300;
+                        background-color: white;
+                        font-size: 45px;
+                        text-align: center;
+                        color: $dark-bg;
+                        padding-top: 13px;
+                    }
+
+                }
+            }
+        }
+
+        .positive-bg{
+            background: $primary !important;
+        }
+
+        .dark-bg{
+            background: $dark1 !important;
+        }
+
+        ion-list{
+            ion-item{
+                font-size: 16px;
+                font-family: "Roboto";
+                font-weight: 300;
+
+                span{
+                    font-size: 14px;
+                    font-family: "Roboto";
+                    font-weight: 300;
+                    color: rgb(170, 170, 170);
+                }
+
+                .badget-mark{
+                    background: $primary !important;
+                    color: white;
+                    border-radius: 20px;
+                    padding: 5px 8px;
+                }
+            }
+        }
+    }
+}

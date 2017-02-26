@@ -1,0 +1,40 @@
+page-selectlevel{
+    ion-content{
+        ion-list{
+            ion-item{
+                box-shadow: 0 1px 3px rgba(0,0,0,0.3) !important;
+            }
+        }
+
+        .mobility-container{            
+            ion-card{
+                position: relative;
+                p{
+                    text-align: center;
+                }
+
+                .card-drop{
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: rgba(0,0,0,0.3);
+                }
+            }
+        }            
+    }
+}
+
+ion-footer.maxpullup-footer{
+    background-color: white !important;
+
+    ion-grid{
+        padding: 0;
+        ion-row{
+            ion-col{
+                padding: 0;
+            }
+        }
+    }
+}

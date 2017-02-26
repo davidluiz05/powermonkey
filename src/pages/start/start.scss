@@ -1,0 +1,54 @@
+page-start{
+    ion-content{
+        background: url('../assets/images/20160424-171523.jpg') no-repeat 0 bottom;
+        background-size: 100%;
+        background-color: $dark-bg !important;
+
+        .header-container{
+            text-align: center;
+
+            img{
+                width: 60%;
+                margin-top: 20px;
+            }
+
+            h4{
+                line-height: 28px;
+                color: white;
+                font-family: "Roboto";
+                font-weight: 300;
+                font-style: normal;
+            }
+        }
+
+        .footer-container{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: block;
+
+            ion-grid{
+                ion-row{
+                    ion-col.nopadding{
+                        padding: 0 !important;
+
+                        button.btn-view{
+                            background-color: $yellow1;
+                            border-top-right-radius: 0px;
+                            border-bottom-right-radius: 0px;
+                            color: $dark1;
+                        }
+
+                        button.btn-login{
+                            background-color: white;
+                            border-top-left-radius: 0px;
+                            border-bottom-left-radius: 0px;
+                            color: $dark1;
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Signup</p>
+        </ion-title>
+        <ion-buttons left>
+            <button ion-button clear navPop>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>.
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="name" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="text" [(ngModel)]="email" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" [(ngModel)]="pass" placeholder="Password"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block class="btn-signup" (click)="signup()">
+        Sign up
+    </button>
+</ion-content>

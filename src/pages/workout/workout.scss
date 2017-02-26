@@ -1,0 +1,56 @@
+page-workout{
+    ion-content{        
+        background: url('../assets/images/background.jpg') 0 bottom no-repeat;
+        background-size: 100%;
+        background-color: $dark-bg !important;
+
+        h2{
+            color: white !important;
+        }
+
+        p{
+            color: $grey !important;
+        }
+
+        ion-list{
+            ion-item{
+                padding-left: 0 !important;
+
+                ion-thumbnail{
+                    margin: 0 !important;
+                    width: 108px !important;
+
+                    img{
+                        width: 100% !important;
+                    }
+                }
+
+                .item-inner{
+                    padding-left: 16px;
+
+                    h3{
+                        color: white !important;
+                    }
+
+                    .badge{
+                        padding-left: 9px;
+                        padding-right: 9px;
+                        font-size: 12px;
+                        font-family: "Roboto";
+                        font-weight: normal;
+                        border-radius: 18px;
+                    }
+
+                    .badge-workout{
+                        color: $primary;
+                        margin-right: 15px;
+                    }
+
+                    .badge-level{
+                        color: white;
+                    }
+                }
+            }
+        }        
+    }
+}

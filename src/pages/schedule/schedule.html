@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-navbar color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Assessement</p>
+        </ion-title>
+        <ion-buttons left navPop>
+            <button ion-button clear>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <p>
+        What days of the week do you plan to perform your workouts? We'll use this to build your training schedule.
+    </p>
+    <p>
+        You can change your workout days any time.
+    </p>
+    <ion-list>
+        <ion-item>
+            <ion-label>Workout day 1</ion-label>
+            <ion-select [(ngModel)]="days[0]">
+                <ion-option value="monday">Monday</ion-option>
+                <ion-option value="tuesday">Tuesday</ion-option>
+                <ion-option value="wednesday">Wednesday</ion-option>
+                <ion-option value="thursday">Thursday</ion-option>
+                <ion-option value="friday">Friday</ion-option>
+                <ion-option value="saturday">Saturday</ion-option>
+                <ion-option value="sunday">Sunday</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Workout day 2</ion-label>
+            <ion-select [(ngModel)]="days[1]">
+                <ion-option value="monday">Monday</ion-option>
+                <ion-option value="tuesday">Tuesday</ion-option>
+                <ion-option value="wednesday">Wednesday</ion-option>
+                <ion-option value="thursday">Thursday</ion-option>
+                <ion-option value="friday">Friday</ion-option>
+                <ion-option value="saturday">Saturday</ion-option>
+                <ion-option value="sunday">Sunday</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Workout day 3</ion-label>
+            <ion-select [(ngModel)]="days[2]">
+                <ion-option value="monday">Monday</ion-option>
+                <ion-option value="tuesday">Tuesday</ion-option>
+                <ion-option value="wednesday">Wednesday</ion-option>
+                <ion-option value="thursday">Thursday</ion-option>
+                <ion-option value="friday">Friday</ion-option>
+                <ion-option value="saturday">Saturday</ion-option>
+                <ion-option value="sunday">Sunday</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <br>
+    <p>Workout reminders</p>
+    <ion-list>
+        <ion-item>
+            <ion-label>Send me workout reminders</ion-label>
+            <ion-checkbox [(ngModel)]="reminder"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer class="schedule-footer">
+    <button ion-button clear color="dark" (click)="onNext()">
+        Start Workout
+    </button>
+</ion-footer>

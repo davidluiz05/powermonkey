@@ -1,0 +1,22 @@
+<ion-content padding dark>
+    <div class="header-container">
+        <img src="assets/images/white-on-transparent2.png">
+        <h4>Get fit with training programs led by the world's elite atheletes.</h4>
+    </div>
+    <div class="footer-container">
+        <ion-grid>
+            <ion-row>
+                <ion-col width-50 class="nopadding">
+                    <button ion-button block class="btn-view" [navPush]="programlistPage">
+                        View Programs
+                    </button>
+                </ion-col>
+                <ion-col width-50 class="nopadding">
+                    <button ion-button block class="btn-login" [navPush]="loginPage">
+                        Log In
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>

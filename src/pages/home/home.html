@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-navbar color="black" hideBackButton="true">
+        <ion-buttons left>
+            <button ion-button clear [navPush]="workoutPage">
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button ion-button clear (click)="showModal()">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div *ngIf="program">
+        <div class="first-block">
+            <div class="image-block">
+                <img src="{{program.photo}}">
+            </div>
+            <div class="gradient"></div>
+        </div>
+        <div class="second-block">
+            <h2>{{program.name}}</h2>
+            <button ion-button  color="yellow" block>
+                Start Next Workout
+            </button>
+        </div>
+        <h4 class="item-padding">Your Progress</h4>
+        <ion-card class="positive-bg">
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <p>Next workout</p>
+                    </ion-col>
+                    <ion-col width-50>
+                        <h1>Day 3</h1>
+                        <p class="text-right">Week 1</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+        <ion-card class="dark-bg">
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <p>Program</p>
+                    </ion-col>
+                    <ion-col width-50>
+                        <h1>17 <span>%</span></h1>
+                        <p class="text-right">Finished</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+        <ion-card class="dark-bg">
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <p>Level</p>
+                    </ion-col>
+                    <ion-col width-50>
+                        <div class="circle">{{level}}</div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+        <h4 class="item-padding">Upcoming workouts</h4>
+        <ion-list class="item-padding" *ngIf="workouts">
+            <ion-item *ngFor="let workout of workouts" (click)="goToWorkoutDetailPage(workout.$key, workout.title)">
+                {{workout.title}}
+                <br>
+                <span>Wed 11/13</span>
+            </ion-item>
+            <button ion-item mode="ios" [navPush]="workoutHistoryPage">
+                All program workouts
+            </button> 
+        </ion-list>
+    </div>
+</ion-content>

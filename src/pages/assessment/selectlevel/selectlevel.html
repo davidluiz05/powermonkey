@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar navPop color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Assessement</p>
+        </ion-title>
+        <ion-buttons left>
+            <button ion-button clear>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div *ngIf="assessments">
+        <p>Step <b>{{(step + 1)}}</b> of <b>{{maxstep}}</b></p>
+        <p>{{assessments[step].description}}</p>
+        <ion-list>
+            <ion-item>
+                <ion-thumbnail item-right (click)="onPlay(exerciseInfo.video)">
+                    <img src="assets/images/zeEsYIj5S5akZo2HOlR7_ScreenShot2016-11-11at4.51.36PM.png">
+                </ion-thumbnail>
+                <p>Watch how to do a strict {{exerciseInfo.title}}</p>
+            </ion-item>
+        </ion-list>
+        <div class="mobility-container" *ngIf="assessments[step].isMobility">                            
+            <ion-card *ngFor="let mobility of assessments[step].mobilityLevels; let i = index;" (click)="mobilityLevel=i">
+                <img src="{{mobility.image}}"/>
+                <p>
+                    {{mobility.levelText}}
+                </p>
+                <div class="card-drop" *ngIf="i==mobilityLevel"></div>
+            </ion-card>            
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="maxpullup-footer">
+    <ion-grid>
+        <ion-row>
+            <ion-col width-80>
+                <ion-input type="number" placeholder="How many {{exerciseInfo.title}}?" [(ngModel)]="value" *ngIf="!isMobility"></ion-input>
+            </ion-col>
+            <ion-col width-20>
+                <button ion-button block clear color="dark" (click)="onNext()">
+                    Next
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-footer>

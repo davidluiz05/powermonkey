@@ -1,0 +1,36 @@
+page-setworkoutday{
+    ion-content{
+        background-color: white !important;
+        
+        .circle{
+            width: 120px;
+            height: 120px;
+            font-size: 45px;
+            text-align: center;
+            border-radius: 50%;
+            line-height: 35px;
+            padding-top: 13px;
+            font-weight: 300;
+            background-color: $yellow1 !important;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+
+            span{
+                display: block;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+
+        .main-container{            
+            text-align: center;                       
+        }
+    }
+}
+
+ion-footer.results-footer{
+   text-align: right;
+   background-color: white !important;
+}

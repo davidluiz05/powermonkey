@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar color="black">
+        <ion-buttons left>
+            <button ion-button clear (click)="cancel()">
+                Cancel
+            </button>
+        </ion-buttons>
+        <ion-title>
+            <p class="ptitle">Settings</p>
+        </ion-title>
+        <ion-buttons right>
+            <button ion-button clear (click)="save()">
+                Save
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content  padding>
+    <div class="item-padding">
+        <h4>Workout Schedule</h4>
+        <p>
+            What days of the week do you plan to perform your workouts?
+        </p>
+    </div>
+    <ion-list>
+        <ion-item>
+            <ion-label>Day 1</ion-label>
+            <ion-select>
+                <ion-option>A</ion-option>
+                <ion-option>B</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Day 2</ion-label>
+            <ion-select>
+                <ion-option>A</ion-option>
+                <ion-option>B</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label>Day 3</ion-label>
+            <ion-select>
+                <ion-option>A</ion-option>
+                <ion-option>B</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <div class="item-padding">
+        <h4>Options</h4>
+    </div>
+
+    <ion-list>
+        <button ion-item mode="ios">
+            Retake Test Day
+        </button>
+        <button ion-item mode="ios">
+            Reset All Data
+        </button>
+    </ion-list>
+</ion-content>

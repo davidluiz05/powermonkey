@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar navPop color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Assessement</p>
+        </ion-title>
+        <ion-buttons left>
+            <button ion-button clear>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="circle">
+        <span>Level</span>
+        {{level}}
+    </div>
+    <div class="main-container">
+        <p>All done!</p>
+        <p>
+            You'll start at <b>level {{level}}</b> of the Gymnastics program.
+        </p>
+    </div>
+</ion-content>
+<ion-footer class="results-footer">
+    <button ion-button clear color="dark" [navPush]="schedulePage">
+        Next: Workout Schedule
+    </button>
+</ion-footer>

@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar navPop color="black" hideBackButton="true">
+        <ion-title>
+            Week 3, Day 6
+        </ion-title>
+        <ion-buttons left>
+            <button ion-button clear>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div *ngIf="sequences">
+    <div *ngFor="let sequence of sequences">
+        <h3 *ngIf="sequence.sequencedata">{{sequence.sequencedata.title}}</h3>
+        <div *ngIf="sequence.exercisedata">
+        <ion-card *ngFor="let exercise of sequence.exercisedata">
+            <ion-card-content *ngIf="exercise.einfo">
+                <ion-card-header>{{exercise.einfo.title}}</ion-card-header>            
+                <ion-list>
+                    <ion-item>                        
+                        <p>{{exercise.einfo.note}}</p>                      
+                    </ion-item>
+                    <ion-item>
+                        reps
+                        <ion-badge item-right>{{exercise.einfo.reps}}</ion-badge>
+                    </ion-item>
+                    <ion-item>
+                        sets
+                        <ion-badge item-right>{{exercise.einfo.sets}}</ion-badge>
+                    </ion-item>
+                    <ion-item>
+                        rest
+                        <ion-badge item-right>{{exercise.einfo.rest}}</ion-badge>
+                    </ion-item>
+                </ion-list>
+                <button ion-button clear icon-left (click)="playVideo(exercise.$key)">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                    View Video                    
+                </button>
+            </ion-card-content>
+        </ion-card>
+        </div>
+    </div>   
+    </div> 
+</ion-content>

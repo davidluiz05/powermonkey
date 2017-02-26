@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Workout</p>
+        </ion-title>
+        <ion-buttons left>
+            <button clear ion-button navPop>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <h2>Hi, Gil</h2>
+    <p>It's been 2 days since your last workout.</p>
+    <ion-list>
+        <ion-item color="primary" navPop>
+            <ion-thumbnail item-left>
+                <img src="assets/images/jON1SKE4QayBUTs2sIeF_mm-gymnastics-bkg.jpg">
+            </ion-thumbnail>
+            <h3>Gymnastics</h3>
+            <span class="badge light-bg badge-workout">
+                Next workout Today
+            </span>
+
+            <span class="badge dark-bg badge-level">
+                Level 3
+            </span>
+        </ion-item>
+    </ion-list>
+    <button ion-button clear block color="light" [navPush]="programlistPage">
+        See All Programs
+    </button>
+</ion-content>

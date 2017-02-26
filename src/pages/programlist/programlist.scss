@@ -1,0 +1,51 @@
+page-programlist{
+    ion-content{
+        .header-container{
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: url('../assets/images/mm-intro.jpg') center center no-repeat;
+            background-size: cover;
+            padding: 16px;
+            height: 120px;
+
+            ion-icon.icon-play{
+                color: $yellow1;
+                font-size: 60px;
+            }
+
+            h4{
+                color: white;
+                font-family: "Roboto";
+                font-weight: 300;
+                font-style: normal;
+                margin: 5px 0 0 0;
+            }
+        }
+
+        .main-content{
+            ion-card{
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100% !important;
+                position: relative;
+
+                ion-card-content{
+                    position: relative;
+
+                    ion-card-title{
+                        color: white;
+                        font-family: "Roboto";
+                        font-weight: 300;
+                        font-size: 32px;                        
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        margin-top: -67px;
+                        margin-bottom: 10px;
+                    }
+                }                
+            }
+        }
+    }
+}

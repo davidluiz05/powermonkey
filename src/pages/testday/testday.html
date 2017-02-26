@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar navPop color="black" hideBackButton="true">
+        <ion-title>
+            <p class="ptitle">Fitness Assessment</p>
+        </ion-title>
+        <!--
+        <ion-buttons left>
+            <button ion-button clear navPop>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>-->
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="header-container">
+        <ion-icon name="clock"></ion-icon>
+        <p>In order to start you on the right workout level let's get a sense of your current fitness.</p>
+        <p>This assessement takes about <b>10 minutes</b></p>
+        <br>
+        <button ion-button block class="btn-start" [navPush]="selectlevelPage">
+            Start Assessment
+        </button>
+        <button ion-button block class="btn-skip">
+            Skip for now
+        </button>
+    </div>
+</ion-content>
